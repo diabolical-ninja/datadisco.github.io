@@ -4,8 +4,9 @@
 
 Adding a progress bar to a loop is easy enough without any extra libraries required.
 ```R
-pb <- txtProgressBar(min = 0, max = loop_end, style = 3)
-for(i in 1:10){
+loop_length <- 10
+pb <- txtProgressBar(min = 0, max = loop_length, style = 3)
+for(i in 1:loop_length){
 	
 	print i
 	
