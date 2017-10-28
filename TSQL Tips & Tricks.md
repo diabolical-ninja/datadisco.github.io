@@ -122,3 +122,11 @@ ROW_NUMBER() OVER(PARTITION BY TerritoryName ORDER BY SalesYTD DESC)
 IF EXISTS(select * from IBIT_Analytics_Applications.INFORMATION_SCHEMA.TABLES where TABLE_NAME = '<table name>' AND TABLE_SCHEMA = 'dbo')
 	DROP TABLE <table name>;
 ```
+
+
+## Calculate Proportions
+```SQL
+SELECT group_name, count(*) * 100.0 / sum(count(*)) over()
+FROM my_table
+group by group_name
+```
