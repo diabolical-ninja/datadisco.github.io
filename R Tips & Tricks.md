@@ -31,15 +31,35 @@ pblapply(1:10, function(x) x+1)
 
 ## Common Libraries
 
-My most common, bare minimum libraries where ever I am.
+Handy libraries for all types on situations.
 
 ```R
-install.packages('data.table',
+install.packages(c('data.table',
                  'foreach',
                  'RODBC',
                  'ggplot2',
                  'h2o',
                  'doSNOW',
                  'parallel',
-                 'gridExtra')
+                 'gridExtra',
+                 'readr'))
+```
+
+
+
+## R Kernel for Jupyter
+
+One of the niftiest features of Jupyter is its ability to run multiple kernels. The below libraries will install the R kernel.
+
+```R
+install.packages(c('repr',
+                   'IRdisplay',
+                   'evaluate',
+                   'crayon',
+                   'pbdZMQ',
+                   'devtools',
+                   'uuid',
+                   'digest'))
+devtools::install_github('IRkernel/IRkernel')
+IRkernel::installspec()
 ```

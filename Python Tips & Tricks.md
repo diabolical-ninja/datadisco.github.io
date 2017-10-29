@@ -49,3 +49,32 @@ import pandas as pd
 cnxn = pyodbc.connect("DRIVER={SQL SERVER};SERVER=<server name>")
 df = pd.read_sql(con = cnxn, sql = "<SQL Query>")
 ```
+
+
+## Jupyter Slideshow Code Hiding
+
+One of the coolest things about Jupyter is the ability to instantly turn analysis into a presentation. Unfortunately that also comes with all the code used in the analysis, generally not something your audience are interested. This handy snippet removes all code blocks from the resulting presentation.
+
+```javascript
+<script>
+    var code_show=true; //true -> hide code at first
+
+    function code_toggle() {
+        $('div.prompt').hide(); // always hide prompt
+
+        if (code_show){
+            $('div.input').hide();
+        } else {
+            $('div.input').show();
+        }
+        code_show = !code_show
+    }
+    $( document ).ready(code_toggle);
+</script>
+```
+
+To actually generate the deck run the following in your terminal of choice:
+
+```bash
+jupyter nbconvert "<notebook name>".ipynb --to slides --post serve
+```
