@@ -78,3 +78,35 @@ To actually generate the deck run the following in your terminal of choice:
 ```bash
 jupyter nbconvert "<notebook name>".ipynb --to slides --post serve
 ```
+
+
+## Plotly Time Series
+
+```Python
+import plotly.graph_objs as go
+import plotly.plotly as py, tools
+from plotly.offline import download_plotlyjs, init_notebook_mode, plot, iplot
+
+# Allow plotly to operate within the notebook
+init_notebook_mode()
+
+
+# List of df columns to plot
+cols = ['col_1','col_2']
+
+data = [go.Scatter(
+            x = df['<timestamp col>'],
+            y = df[x],
+            name = x)
+       for x in cols]
+
+layout = go.Layout(
+            title = 'My Title',
+            xaxis = dict(title = "Timestamp"),
+            yaxis = dict(title = "something"
+        )
+)
+
+fig = go.Figure(data = data, layout = layout)
+iplot(fig)
+```
