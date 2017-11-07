@@ -84,7 +84,8 @@ jupyter nbconvert "<notebook name>".ipynb --to slides --post serve
 
 ```Python
 import plotly.graph_objs as go
-import plotly.plotly as py, tools
+import plotly.plotly as py
+from plotly import tools
 from plotly.offline import download_plotlyjs, init_notebook_mode, plot, iplot
 
 # Allow plotly to operate within the notebook
