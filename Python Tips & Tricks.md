@@ -78,3 +78,19 @@ To actually generate the deck run the following in your terminal of choice:
 ```bash
 jupyter nbconvert "<notebook name>".ipynb --to slides --post serve
 ```
+
+
+## Pandas CSV Exporting
+
+The CSV module is required for quoting & other items.
+
+```python
+import csv
+
+msgs_df.to_csv('\<path>\<to>\<dir>\<filename>.csv',
+               sep = "|",
+               index = False,
+               quoting = csv.QUOTE_ALL
+               )
+
+```
