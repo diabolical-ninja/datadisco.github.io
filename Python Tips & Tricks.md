@@ -90,7 +90,8 @@ import csv
 msgs_df.to_csv('\<path>\<to>\<dir>\<filename>.csv',
                sep = "|",
                index = False,
-               quoting = csv.QUOTE_ALL
+               quoting = csv.QUOTE_ALL,
+               encoding='utf-8'
                )
 
 ```
