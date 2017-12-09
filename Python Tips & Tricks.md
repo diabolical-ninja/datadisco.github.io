@@ -111,3 +111,11 @@ layout = go.Layout(
 fig = go.Figure(data = data, layout = layout)
 iplot(fig)
 ```
+
+## Jupyter 
+
+Often times when plotting using javascript libraries (plotly, atlas, etc) the jupyter rate limit can be exceeded meaning no plots are displayed. Maxing out the rate limiter when starting up tends to resolve this. 
+
+```bash
+jupyter notebook --NotebookApp.iopub_data_rate_limit=1.0e10
+```
