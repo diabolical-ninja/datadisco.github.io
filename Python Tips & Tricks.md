@@ -119,3 +119,20 @@ Often times when plotting using javascript libraries (plotly, atlas, etc) the ju
 ```bash
 jupyter notebook --NotebookApp.iopub_data_rate_limit=1.0e10
 ```
+
+
+## Pandas CSV Exporting
+
+The CSV module is required for quoting & other items.
+
+```python
+import csv
+
+msgs_df.to_csv('\<path>\<to>\<dir>\<filename>.csv',
+               sep = "|",
+               index = False,
+               quoting = csv.QUOTE_ALL,
+               encoding='utf-8'
+               )
+
+```
