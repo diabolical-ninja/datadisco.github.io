@@ -71,7 +71,7 @@ order by req.total_elapsed_time desc
 ## Truncate timestamp to given interval
 
 ```SQL
-dateadd(hour, datediff(hour, 0, timestamp_field, 0) as time_stamp
+dateadd(hour, datediff(hour, 0, timestamp_field), 0) as time_stamp
 , DATEADD( minute, ( DATEDIFF( minute, 0, timestamp_field ) / 10 ) * 10, 0 ) AS dateTimeRoundDown  ## 10mins
 ```
 
