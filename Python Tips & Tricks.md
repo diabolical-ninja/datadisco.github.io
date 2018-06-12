@@ -136,3 +136,15 @@ msgs_df.to_csv('\<path>\<to>\<dir>\<filename>.csv',
                )
 
 ```
+
+
+## Datetime Formatting
+
+Make the datetime output pretty for printing
+
+``` python
+from datetime import datetime
+
+datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+
+```
