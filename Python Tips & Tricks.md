@@ -210,5 +210,6 @@ logger.error("My Error")
 logger.critical("My Critical")
 ```
 
+* Log format options & reference: https://docs.python.org/2/library/logging.html#logrecord-attributes
 * For info on filemodes, see: https://docs.python.org/3/library/functions.html#filemodes
 * A good tutorial is: https://fangpenlin.com/posts/2012/08/26/good-logging-practice-in-python/
