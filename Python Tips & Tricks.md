@@ -196,7 +196,7 @@ import logging
 # Configure Logger
 LOG_FORMAT = "%(levelname)s %(asctime)s - %(message)s"
 logging.basicConfig(filename = "\path\to\filename.log"
-                  , level = logging.debug
+                  , level = 'DEBUG'
                   , format = LOG_FORMAT
                   , filemode = 'w'
                   )
