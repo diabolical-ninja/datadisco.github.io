@@ -200,7 +200,7 @@ logging.basicConfig(filename = "\path\to\filename.log"
                   , format = LOG_FORMAT
                   , filemode = 'w'
                   )
-logger = logging.getLogger()
+logger = logging.getLogger(__name__)
 
 # Logger options in order of severity
 logger.debug("My Debug")
@@ -209,3 +209,6 @@ logger.warning("My Warning")
 logger.error("My Error")
 logger.critical("My Critical")
 ```
+
+* For info on filemodes, see: https://docs.python.org/3/library/functions.html#filemodes
+* A good tutorial is: https://fangpenlin.com/posts/2012/08/26/good-logging-practice-in-python/
