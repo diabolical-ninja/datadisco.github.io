@@ -148,3 +148,64 @@ from datetime import datetime
 datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
 ```
+
+
+## Simple Multi Threading
+
+A very simple examlpe of how multithreading can be implemented
+
+Our required import.
+```python
+import concurrent.futures
+```
+
+How many threads to use
+```Python
+num_threads = 10
+```
+
+I believe this works across any iterable, eg a list, dataframe, etc
+```python
+sample_iteration_list = [1,2,3,4]
+```
+
+Lastly, set the threadpool to execute your function across your interator. The `executor.submit` order of inputs are:
+1. The function to apply
+2. The item you're iterating across
+3. Any other (static) function inputs
+
+```python
+with concurrent.futures.ThreadPoolExecutor(max_workers = num_threads) as executor:
+  
+  run_transcriber = {
+                    executor.submit(<fn name>, <item>, <var1>,...,<varN>): 
+                                item for item in sample_iteration_list
+                    }
+
+```
+
+
+
+## Basic Logging
+
+Simple example of using the logging module:
+
+```python
+import logging
+
+# Configure Logger
+LOG_FORMAT = "%(levelname)s %(asctime)s - %(message)s"
+logging.basicConfig(filename = "\path\to\filename.log"
+                  , level = logging.debug
+                  , format = LOG_FORMAT
+                  , filemode = 'w'
+                  )
+logger = logging.getLogger()
+
+# Logger options in order of severity
+logger.debug("My Debug")
+logger.info("My Info")
+logger.warning("My Warning")
+logger.error("My Error")
+logger.critical("My Critical")
+```
