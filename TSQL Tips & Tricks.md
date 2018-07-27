@@ -130,3 +130,30 @@ SELECT group_name, count(*) * 100.0 / sum(count(*)) over()
 FROM my_table
 group by group_name
 ```
+
+
+
+## Error Emailing
+
+Useful as part of Stored Procedures. Not applicable for Functions.
+
+```SQL
+BEGIN TRY
+
+    /*
+    Some SQL to run
+    */
+
+END TRY
+
+BEGIN CATCH
+	DECLARE @error_msg VARCHAR(1000);
+	SET @error_msg = ERROR_MESSAGE();
+	EXEC msdb.dbo.sp_send_dbmail
+		@profile_name='<Profile Name>',
+		@recipients = '<recipients list>',
+		@subject= '<subjust>' ,
+		@body=@error_msg
+
+END CATCH
+```
