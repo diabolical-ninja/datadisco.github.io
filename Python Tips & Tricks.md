@@ -213,3 +213,87 @@ logger.critical("My Critical")
 * Log format options & reference: https://docs.python.org/2/library/logging.html#logrecord-attributes
 * For info on filemodes, see: https://docs.python.org/3/library/functions.html#filemodes
 * A good tutorial is: https://fangpenlin.com/posts/2012/08/26/good-logging-practice-in-python/
+
+
+
+## Database Saves
+
+NOTE: Stolen from https://iabdb.me/2016/07/13/a-better-way-load-data-into-microsoft-sql-server-from-pandas/
+
+This should work for any DB but has only been tested with SQL-Server.
+
+
+```python
+def df_to_sql(connection: pyodbc.Connection, df: pd.core.frame.DataFrame, data_base: str, table_name: str, table_schema: str = 'dbo', chunk_size: int = 1000):
+    """Writes Dataframe to a DB
+    This method should be significantly faster & easier to use than the pandas df.to_sql method
+    In theory this works for both sqlalchemy & pyodbc but THIS HAS NOT BEEN TESTED
+
+    NOTE: Stolen from https://iabdb.me/2016/07/13/a-better-way-load-data-into-microsoft-sql-server-from-pandas/
+    
+    Args:
+        connection (pyodbc.Connection): DB connection object
+        df (pd.core.frame.DataFrame): The dataframe to upload
+        data_base (str): Database name to use
+        table_name (str): Table name to store the data in
+        table_schema (str, optional): Defaults to 'dbo'. The table schema to use
+        chunk_size (int, optional): Defaults to 1000. The number of records to insert in each batch.
+                                    Note, SQL Server limits batch inserts to 1000 records at a time
+    """
+
+    # Let the user know the batch size is too large. For now though, don't do anything about it
+    if chunk_size > 1000:
+        warnings.warn('Batch size exceeds that supported by MS SQL Server. The maximum allowable is 1000')
+
+    # Core insert statement
+    table_cols = ', '.join(df.columns)
+    
+    core_insert = "INSERT INTO {}.{}.{} ({}) VALUES ".format(data_base, table_schema, table_name, table_cols)
+
+    # For each record, turn them into a tuple of stringsf for the insert
+    # EG: ('colA','ColB','etc')
+    records = [str(tuple(x)) for x in df.values]
+
+    cursor = connection.cursor()
+
+    # Iterate across each batch, inserting into the DB
+    for batch in chunker(records, chunk_size):
+        
+        # Builds the full insert statement
+        rows = ','.join(batch)
+        insert_rows = core_insert + rows
+
+        insert_rows = insert_rows.replace('nan','NULL')
+
+        try:       
+        # Send the data to the DB. Commit just in case autocommit = False in the DB connection
+            cursor.execute(insert_rows)
+            connection.commit()
+        except Exception as ex:
+            print(ex)
+
+    print('Complete: {} records uploaded'.format(len(records)))
+```
+
+A secondary helper function is required, which slips the dataframe into chunks of size N, to be used in each batch upload.
+
+```python
+def chunker(seq: list, size: int):
+    """Chunks a list into pieces where len(list) <= size
+
+    Eg, seq = [1,2,3,4,5] & size = 2 would output:
+
+        [1,2], [3,4], [5]
+
+    NOTE: Stolen from https://stackoverflow.com/questions/434287/what-is-the-most-pythonic-way-to-iterate-over-a-list-in-chunks
+    
+    Args:
+        seq (list): The item to be chunked
+        size (int): The maximum length allowed for each chunk
+    
+    Returns:
+        [generator]: A generator that outputs each chunk
+    """
+
+    return (seq[pos:pos + size] for pos in range(0, len(seq), size))
+```
