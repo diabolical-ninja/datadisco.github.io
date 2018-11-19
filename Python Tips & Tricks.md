@@ -18,6 +18,22 @@ pip install dash-core-components==0.12.0
 pip install plotly==2.0.13
 ```
 
+## Jupyter Start-Up Magics
+
+Generally making jupyter life better & easier
+
+```python
+# Matplotlib inline rendering
+%matplotlib inline
+
+# Allow plotly to operate within the notebook
+init_notebook_mode()
+
+# Extension Reloads
+%load_ext autoreload
+%autoreload 2
+```
+
 
 ## Column Wise Binariser
 
