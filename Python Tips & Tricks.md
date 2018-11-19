@@ -291,7 +291,7 @@ def df_to_sql(connection: pyodbc.Connection, df: pd.core.frame.DataFrame, data_b
     print('Complete: {} records uploaded'.format(len(records)))
 ```
 
-A secondary helper function is required, which slips the dataframe into chunks of size N, to be used in each batch upload.
+A secondary helper function is required, which splits the dataframe into chunks of size N, to be used in each batch upload.
 
 ```python
 def chunker(seq: list, size: int):
