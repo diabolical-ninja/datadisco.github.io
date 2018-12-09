@@ -9,5 +9,16 @@
 [Spark + Scala](https://yassin-eltahir.github.io/datadisco.github.io/Spark%20&%20Scala%20Tips%20&%20Tricks)    
 
 
-## Demos
+## VSCode Extensions
 
+* [autoDocstring] (https://marketplace.visualstudio.com/items?itemName=njpwerner.autodocstring)
+
+* [Beautify] (https://marketplace.visualstudio.com/items?itemName=HookyQR.beautify)
+
+* [Guides] (https://marketplace.visualstudio.com/items?itemName=spywhere.guides)
+
+* [Python] (https://marketplace.visualstudio.com/items?itemName=ms-python.python)
+
+* [vscode-icons] (https://marketplace.visualstudio.com/items?itemName=robertohuertasm.vscode-icons)
+
+* [Charcol Oceanic Next] (https://marketplace.visualstudio.com/items?itemName=joshpeng.theme-charcoal-oceanicnext)
