@@ -2,6 +2,8 @@
 
 ## Code Gists
 
+General tips & tricks for each language.
+
 [R](https://yassin-eltahir.github.io/datadisco.github.io/R%20Tips%20&%20Tricks)       
 [T-SQL](https://yassin-eltahir.github.io/datadisco.github.io/TSQL%20Tips%20&%20Tricks)    
 [CMD](https://yassin-eltahir.github.io/datadisco.github.io/Command%20Prompt%20Tips%20&%20Tricks)    
@@ -11,14 +13,21 @@
 
 ## VSCode Extensions
 
-* [autoDocstring] (https://marketplace.visualstudio.com/items?itemName=njpwerner.autodocstring)
+Useful extensions used everyday.
 
-* [Beautify] (https://marketplace.visualstudio.com/items?itemName=HookyQR.beautify)
+[autoDocstring]
+(https://marketplace.visualstudio.com/items?itemName=njpwerner.autodocstring)
 
-* [Guides] (https://marketplace.visualstudio.com/items?itemName=spywhere.guides)
+[Beautify]
+(https://marketplace.visualstudio.com/items?itemName=HookyQR.beautify)
 
-* [Python] (https://marketplace.visualstudio.com/items?itemName=ms-python.python)
+[Guides]
+(https://marketplace.visualstudio.com/items?itemName=spywhere.guides)
 
-* [vscode-icons] (https://marketplace.visualstudio.com/items?itemName=robertohuertasm.vscode-icons)
+[Python]
+(https://marketplace.visualstudio.com/items?itemName=ms-python.python)
 
-* [Charcol Oceanic Next] (https://marketplace.visualstudio.com/items?itemName=joshpeng.theme-charcoal-oceanicnext)
+[vscode-icons]
+(https://marketplace.visualstudio.com/items?itemName=robertohuertasm.vscode-icons)
+
+[Charcoal Oceanic Next] (https://marketplace.visualstudio.com/items?itemName=joshpeng.theme-charcoal-oceanicnext)
