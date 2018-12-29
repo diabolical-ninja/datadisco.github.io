@@ -15,21 +15,15 @@ General tips & tricks for each language.
 
 Useful extensions used everyday.
 
-[R](https://yassin-eltahir.github.io/datadisco.github.io/R%20Tips%20&%20Tricks)  
+[autoDocstring](https://marketplace.visualstudio.com/items?itemName=njpwerner.autodocstring)
 
-[autoDocstring]
-(https://marketplace.visualstudio.com/items?itemName=njpwerner.autodocstring)
+[Beautify](https://marketplace.visualstudio.com/items?itemName=HookyQR.beautify)
 
-[Beautify]
-(https://marketplace.visualstudio.com/items?itemName=HookyQR.beautify)
+[Guides](https://marketplace.visualstudio.com/items?itemName=spywhere.guides)
 
-[Guides]
-(https://marketplace.visualstudio.com/items?itemName=spywhere.guides)
+[Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
 
-[Python]
-(https://marketplace.visualstudio.com/items?itemName=ms-python.python)
+[vscode-icons](https://marketplace.visualstudio.com/items?itemName=robertohuertasm.vscode-icons)
 
-[vscode-icons]
-(https://marketplace.visualstudio.com/items?itemName=robertohuertasm.vscode-icons)
+[Charcoal Oceanic Next](https://marketplace.visualstudio.com/items?itemName=joshpeng.theme-charcoal-oceanicnext)
 
-[Charcoal Oceanic Next] (https://marketplace.visualstudio.com/items?itemName=joshpeng.theme-charcoal-oceanicnext)
