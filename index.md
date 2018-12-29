@@ -15,6 +15,8 @@ General tips & tricks for each language.
 
 Useful extensions used everyday.
 
+[R](https://yassin-eltahir.github.io/datadisco.github.io/R%20Tips%20&%20Tricks)  
+
 [autoDocstring]
 (https://marketplace.visualstudio.com/items?itemName=njpwerner.autodocstring)
 
