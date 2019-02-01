@@ -14,7 +14,7 @@ General tips & tricks for each language.
 
 ## VSCode Extensions
 
-Useful extensions used everyday.
+Useful extensions for everyday use.
 
 [autoDocstring](https://marketplace.visualstudio.com/items?itemName=njpwerner.autodocstring)
 
@@ -28,3 +28,8 @@ Useful extensions used everyday.
 
 [Charcoal Oceanic Next](https://marketplace.visualstudio.com/items?itemName=joshpeng.theme-charcoal-oceanicnext)
 
+[Jupyter Notebook Previewer](https://marketplace.visualstudio.com/items?itemName=jithurjacob.nbpreviewer)
+
+[Code Runner](https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner)
+
+[PlantUML](https://marketplace.visualstudio.com/items?itemName=jebbs.plantuml)
