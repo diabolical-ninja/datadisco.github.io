@@ -10,26 +10,4 @@ General tips & tricks for each language.
 [Python](https://yassin-eltahir.github.io/datadisco.github.io/Python%20Tips%20&%20Tricks)    
 [Spark + Scala](https://yassin-eltahir.github.io/datadisco.github.io/Spark%20&%20Scala%20Tips%20&%20Tricks)    
 [Git](https://yassin-eltahir.github.io/datadisco.github.io/Git%20Tips%20&%20Tricks)
-
-
-## VSCode Extensions
-
-Useful extensions for everyday use.
-
-[autoDocstring](https://marketplace.visualstudio.com/items?itemName=njpwerner.autodocstring)
-
-[Beautify](https://marketplace.visualstudio.com/items?itemName=HookyQR.beautify)
-
-[Guides](https://marketplace.visualstudio.com/items?itemName=spywhere.guides)
-
-[Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
-
-[vscode-icons](https://marketplace.visualstudio.com/items?itemName=robertohuertasm.vscode-icons)
-
-[Charcoal Oceanic Next](https://marketplace.visualstudio.com/items?itemName=joshpeng.theme-charcoal-oceanicnext)
-
-[Jupyter Notebook Previewer](https://marketplace.visualstudio.com/items?itemName=jithurjacob.nbpreviewer)
-
-[Code Runner](https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner)
-
-[PlantUML](https://marketplace.visualstudio.com/items?itemName=jebbs.plantuml)
+[VS Code](https://yassin-eltahir.github.io/datadisco.github.io/VS%20Code%20Tips%20&%20Tricks)
