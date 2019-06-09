@@ -12,6 +12,8 @@ Useful extensions for everyday use.
 
 [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
 
+[R](https://marketplace.visualstudio.com/items?itemName=Ikuyadeu.r)
+
 [vscode-icons](https://marketplace.visualstudio.com/items?itemName=robertohuertasm.vscode-icons)
 
 [Charcoal Oceanic Next](https://marketplace.visualstudio.com/items?itemName=joshpeng.theme-charcoal-oceanicnext)
@@ -25,15 +27,29 @@ Useful extensions for everyday use.
 
 ## Shortcuts
 
+Open via `Preferences -> Open Keyboard Shortcuts (JSON)`
+
 ### Python Cell Symbol
 
 Keyboard binding to add `#%%` to the in focus script.
 
 ```json
 {
-        "key": "ctrl+shift+a",
-        "command": "type",
-        "args": {"text": "#%%"},
-        "when": "editorTextFocus"
-    }
+    "key": "ctrl+shift+a",
+    "command": "type",
+    "args": {"text": "#%%"},
+    "when": "editorTextFocus"
+}
+```
+
+
+### Send Text to Terminal
+
+Binding to send any selected text to the current terminal. Useful when coding in a language with poor interactive support (eg anything other than python)
+
+```json
+{
+    "key": "ctrl+shift+enter",
+    "command": "workbench.action.terminal.runSelectedText"
+}
 ```
