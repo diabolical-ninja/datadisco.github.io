@@ -24,6 +24,8 @@ Useful extensions for everyday use.
 
 [PlantUML](https://marketplace.visualstudio.com/items?itemName=jebbs.plantuml)
 
+[Liveshare](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare-pack)
+
 
 ## Shortcuts
 
