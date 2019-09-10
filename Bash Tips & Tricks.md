@@ -45,7 +45,7 @@ grep "<search string">
 Add the following flags to modify search conditions:
 * -r = recursive list  
 * -w = only match whole words
-* | = use in search string as an OR
+* \| = use in search string as an OR
 
   
 ### For a specific directory or file
