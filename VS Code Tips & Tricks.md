@@ -55,3 +55,10 @@ Binding to send any selected text to the current terminal. Useful when coding in
     "command": "workbench.action.terminal.runSelectedText"
 }
 ```
+
+
+## Force Clean workspace
+
+To force vscode to open a new, clean workspace when opening (unless specifically opening from a directory) update:
+* Window: Restore Windows
+    - "none"

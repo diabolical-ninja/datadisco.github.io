@@ -1,0 +1,55 @@
+# Handy Tricks for Bash
+
+## File Sizes
+Size of all files in a directory
+```bash
+du -h
+```
+
+Size of current directory
+```bash
+du -h -s
+```
+
+Size of top-level directories within current directory
+```bash
+du -h -d 1
+```
+
+
+## Find files
+### List Files & directories
+```bash
+ls
+```
+
+Add the following flags to modify search conditions:
+* -R = recursive list    
+* -a = list all
+* -s = show file size
+* -l = show with details
+
+
+### Filter on name
+```bash
+ls | grep "<file/directory name>"
+```
+
+
+
+## Find String
+### All files containing a string
+```bash
+grep "<search string">
+```
+Add the following flags to modify search conditions:
+* -r = recursive list  
+* -w = only match whole words
+* \| = use in search string as an OR
+
+  
+### For a specific directory or file
+```bash
+grep "<search string>" my/directory/
+grep "<search string>" my/directory/myfile.txt
+```

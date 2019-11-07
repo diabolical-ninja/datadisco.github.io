@@ -46,3 +46,19 @@ Blow away all current changes
 ```bash
 git reset --hard
 ```
+
+## Branches
+See local branchs
+```bash
+git branch
+```
+
+List all branchs
+```bash
+git branch -a
+```
+
+Switch branch or create a new branch
+```bash
+git checkout <branchname>
+```
