@@ -29,6 +29,12 @@ Generally making jupyter life better & easier
 # Allow plotly to operate within the notebook
 init_notebook_mode()
 
+# General pandas settings to:
+#  - Shush pandas copy warning
+#  - Pandas show more columns
+pd.options.mode.chained_assignment = None
+pd.set_option('display.max_columns', 500)
+
 # Extension Reloads
 %load_ext autoreload
 %autoreload 2
@@ -312,4 +318,26 @@ def chunker(seq: list, size: int):
     """
 
     return (seq[pos:pos + size] for pos in range(0, len(seq), size))
+```
+
+
+## Pytest
+
+Run from command line when the name isn't added:
+```bash
+python -m pytest
+```
+
+To run a specific test file:
+```bash
+python -m pytest <path>/<to>/<test_file>.py
+```
+
+Display pass/fail for each test, add the verbose flag:
+```bash
+python -m pytest -v
+
+# OR
+
+python -m pytest --verbose
 ```
