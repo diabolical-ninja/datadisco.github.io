@@ -58,7 +58,13 @@ List all branchs
 git branch -a
 ```
 
-Switch branch or create a new branch
+Switch branch
 ```bash
 git checkout <branchname>
+```
+
+Create a new branch, switch to it & push it to remote
+```sh
+git checkout -b <branchname>
+git push -u origin <branchname>
 ```
