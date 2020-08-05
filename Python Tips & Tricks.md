@@ -34,6 +34,7 @@ init_notebook_mode()
 #  - Pandas show more columns
 pd.options.mode.chained_assignment = None
 pd.set_option('display.max_columns', 500)
+pd.set_option('display.max_rows', 200)
 
 # Extension Reloads
 %load_ext autoreload
