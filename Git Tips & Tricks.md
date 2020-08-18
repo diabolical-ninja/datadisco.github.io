@@ -68,3 +68,16 @@ Create a new branch, switch to it & push it to remote
 git checkout -b <branchname>
 git push -u origin <branchname>
 ```
+
+## Deleting A Commit
+In the instance a commit is must be deleted, as opposed to reverting, etc.
+```sh
+git reset --hard HEAD^
+
+# To remove last N commits
+git reset --hard HEAD~2
+
+# Push changes to remote. This will overwrite remote!!
+git push origin -f
+```
+
