@@ -368,3 +368,13 @@ docstring-convention=google
 max-line-length = 100
 format = ${cyan}%(path)s${reset} | r:${yellow_bold}%(row)d${reset}, c:${green_bold}%(col)d${reset} | ${red_bold}%(code)s${reset}: %(text)s
 ```
+
+Where:
+- `C`, `E`, `F` & `W` are defaults from `flake8`
+- `D`: flake8-docstrings
+- `I`: flake8-import-order & flake8-requirements
+- `ANN`: flake8-annotations
+- `N`: pep8-naming
+- `Q`: flake8-quotes
+- `DAR`: darglint
+- `BLK`: flake8-black
