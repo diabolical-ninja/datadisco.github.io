@@ -342,3 +342,29 @@ python -m pytest -v
 
 python -m pytest --verbose
 ```
+
+
+## Flake8 Linting
+
+Install flake8 & additional plugins:
+```sh
+flake8
+flake8-docstrings
+flake8-import-order
+flake8-black
+darglint
+flake8-annotations
+flake8-quotes
+flake8-requirements
+pep8-naming
+```
+
+Place the below in a `.flake8` file in the repo root: 
+
+```sh
+[flake8]
+select=C,E,F,W,D,I,ANN,N,Q,DAR
+docstring-convention=google
+max-line-length = 100
+format = ${cyan}%(path)s${reset} | r:${yellow_bold}%(row)d${reset}, c:${green_bold}%(col)d${reset} | ${red_bold}%(code)s${reset}: %(text)s
+```
