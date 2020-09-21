@@ -53,3 +53,11 @@ Add the following flags to modify search conditions:
 grep "<search string>" my/directory/
 grep "<search string>" my/directory/myfile.txt
 ```
+
+
+## Assign Environment Variables
+
+If you've got a list of environment variables in a `.env` file, this will assign them all to your existing environment:
+```bash
+export $(grep -v '^#' .env | xargs)
+```
